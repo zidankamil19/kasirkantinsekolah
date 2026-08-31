@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #111;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(135deg, #b30000, #1a0000);
+    text-align: center;
+    padding: 30px;
+    border-bottom: 4px solid #ff0000;
+}
+
+header h1 {
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-top: 8px;
+    color: #ddd;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* SECTION */
+section {
+    background: #1c1c1c;
+    border-radius: 15px;
+    padding: 25px;
+    border: 1px solid #333;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.15);
+}
+
+section h2 {
+    color: #ff3333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ff0000;
+    padding-bottom: 10px;
+}
+
+/* MENU */
+.menu-section {
+    grid-column: span 2;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.menu-card {
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff0000;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+}
+
+.menu-card h3 {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #ff3333;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.menu-card input {
+    width: 80px;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}
+
+/* DETAIL TRANSAKSI */
+.detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background: #111;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.total {
+    border: 2px solid #ff0000;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin: 20px 0;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #ff5555;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #555;
+    background: #111;
+    color: white;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #ff0000;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 13px;
+    background: #d60000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #ff0000;
+    transform: scale(1.02);
+}
+
+.btn-reset {
+    margin-top: 15px;
+    background: #333;
+}
+
+.btn-reset:hover {
+    background: #555;
+}
+
+/* KEMBALIAN */
+.kembalian-box {
+    margin-top: 15px;
+    border: 1px solid #ff0000;
+    color: #ff5555;
+    font-weight: bold;
+}
+
+/* PESAN */
+#pesan {
+    text-align: center;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+/* STRUK */
+.struk-section {
+    grid-column: span 2;
+}
+
+.struk {
+    background: white;
+    color: black;
+    max-width: 500px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 5px;
+    font-family: monospace;
+}
+
+.struk-title {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+    margin: 5px;
+}
+
+.struk hr {
+    border: 1px dashed black;
+    margin: 15px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #080808;
+    border-top: 2px solid #ff0000;
+    color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-section,
+    .struk-section {
+        grid-column: span 1;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
