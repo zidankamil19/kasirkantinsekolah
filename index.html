@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KANTIN MERDEKA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🍽️ KANTIN MERDEKA</h1>
+        <p>Aplikasi Kasir Kantin Sekolah</p>
+    </header>
+
+    <main class="container">
+
+        <!-- DAFTAR MENU -->
+        <section class="menu-section">
+            <h2>📋 Daftar Menu</h2>
+
+            <div class="menu-grid">
+
+                <div class="menu-card">
+                    <h3>Nasi Goreng</h3>
+                    <p>Rp 12.000</p>
+                    <input type="number" id="nasiGoreng" min="0" value="0">
+                </div>
+
+                <div class="menu-card">
+                    <h3>Mie Goreng</h3>
+                    <p>Rp 10.000</p>
+                    <input type="number" id="mieGoreng" min="0" value="0">
+                </div>
+
+                <div class="menu-card">
+                    <h3>Ayam Geprek</h3>
+                    <p>Rp 15.000</p>
+                    <input type="number" id="ayamGeprek" min="0" value="0">
+                </div>
+
+                <div class="menu-card">
+                    <h3>Es Teh</h3>
+                    <p>Rp 4.000</p>
+                    <input type="number" id="esTeh" min="0" value="0">
+                </div>
+
+                <div class="menu-card">
+                    <h3>Es Jeruk</h3>
+                    <p>Rp 5.000</p>
+                    <input type="number" id="esJeruk" min="0" value="0">
+                </div>
+
+                <div class="menu-card">
+                    <h3>Air Mineral</h3>
+                    <p>Rp 3.000</p>
+                    <input type="number" id="airMineral" min="0" value="0">
+                </div>
+
+            </div>
+        </section>
+
+        <!-- TRANSAKSI -->
+        <section class="kasir-section">
+            <h2>🛒 Detail Transaksi</h2>
+
+            <div class="detail">
+                <span>Subtotal</span>
+                <span id="subtotal">Rp 0</span>
+            </div>
+
+            <div class="detail total">
+                <span>Total Pembayaran</span>
+                <span id="total">Rp 0</span>
+            </div>
+
+            <div class="input-group">
+                <label for="uangBayar">💵 Uang Pembayaran</label>
+                <input type="number" id="uangBayar" placeholder="Masukkan uang pembayaran">
+            </div>
+
+            <button onclick="hitungTransaksi()">HITUNG PEMBAYARAN</button>
+
+            <div id="pesan"></div>
+
+            <div class="detail kembalian-box">
+                <span>Kembalian</span>
+                <span id="kembalian">Rp 0</span>
+            </div>
+
+            <button class="btn-reset" onclick="resetTransaksi()">
+                RESET TRANSAKSI
+            </button>
+        </section>
+
+        <!-- STRUK -->
+        <section class="struk-section">
+            <h2>🧾 Struk Transaksi</h2>
+
+            <div class="struk" id="struk">
+                <p class="struk-title">KANTIN MERDEKA</p>
+                <p class="center">Kantin Sekolah</p>
+
+                <hr>
+
+                <div id="isiStruk">
+                    <p>Belum ada transaksi.</p>
+                </div>
+
+                <hr>
+
+                <p class="center">Terima Kasih 🙏</p>
+                <p class="center">Selamat Menikmati!</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 KANTIN MERDEKA | Aplikasi Kasir Sekolah</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
